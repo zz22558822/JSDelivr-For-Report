@@ -55,6 +55,7 @@ body {
   color: #858796;
   text-align: left;
   background-color: #fff;
+  background-color: var(--bs-body-bg);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -9810,6 +9811,37 @@ a:focus {
   padding-right: 1.5rem;
 }
 
+#content {
+    padding-top: 1.5rem;
+}
+#dataTable, #dataTable2 {
+  margin-bottom: 0;
+}
+
+.download-btn {
+  position: fixed;
+  right: 1%;
+  top: -68px;
+  width: 4%;
+  min-width: 60px;
+  height: 80px;
+  background: #777;
+  transition: all 0.5s;
+  border-radius: 3px;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.download-btn:hover{
+  min-width: 60px;
+  top: -15px;
+  font-size: 40px;
+}
+
 .scroll-to-top {
   position: fixed;
   right: 1rem;
@@ -9833,6 +9865,54 @@ a:focus {
 
 .scroll-to-top i {
   font-weight: 800;
+}
+
+.hide-tape {
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-align: center;
+  color: #fff;
+  background: rgba(90, 92, 105, 0.5);
+  line-height: 46px;
+}
+.hide-tape:hover {
+  color: white;
+  background: #5a5c69;
+}
+.themeButton {
+  position: fixed;
+  right: 1rem;
+  bottom: 9rem;
+  font-size: 30px;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-align: center;
+  color: #f9c922;
+  background: rgba(90, 92, 105, 0.5);
+  line-height: 46px;
+}
+.themeButton:hover {
+  color: #ff9900;
+  background: #5a5c69;
+}
+html[data-bs-theme=dark] .themeButton {
+  color: #fff;
+}
+html[data-bs-theme=dark] .themeButton:hover {
+  color: #4e73df;
+  background: #5a5c69;
+}
+.themeButton i {
+  transition: transform 0.3s ease;
+}
+html[data-bs-theme=light] .themeIcon {
+  transform: rotate(180deg);
+}
+html[data-bs-theme=dark] .themeIcon {
+  transform: rotate(0deg);
 }
 
 @-webkit-keyframes growIn {
@@ -10802,6 +10882,11 @@ a:focus {
   text-decoration: none;
   position: relative;
   padding: 0.75rem 3.25rem 0.75rem 1.25rem;
+}
+
+.card, #tapeTable, #content, .card-header {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
 }
 
 .card .card-header[data-toggle="collapse"]::after {
